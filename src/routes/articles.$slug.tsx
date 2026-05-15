@@ -58,7 +58,7 @@ export const Route = createFileRoute("/articles/$slug")({
 });
 
 function ArticlePage() {
-  const { article } = Route.useLoaderData();
+  const { article } = Route.useLoaderData() as { article: Article };
   const params = Route.useParams();
   const related = getRelated(article.slug, 2);
 
