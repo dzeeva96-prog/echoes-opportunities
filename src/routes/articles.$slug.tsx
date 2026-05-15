@@ -1,5 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { getArticle, getRelated } from "@/data/articles";
+import { getArticle, getRelated, type Article } from "@/data/articles";
 import { site } from "@/data/site";
 import { ArticleBody } from "@/components/site/ArticleBody";
 import { TableOfContents } from "@/components/site/TableOfContents";
@@ -9,7 +9,7 @@ import { VisitorCounter } from "@/components/site/VisitorCounter";
 import { Calendar, Clock, ArrowLeft } from "lucide-react";
 
 export const Route = createFileRoute("/articles/$slug")({
-  loader: ({ params }) => {
+  loader: ({ params }): { article: Article } => {
     const article = getArticle(params.slug);
     if (!article) throw notFound();
     return { article };
