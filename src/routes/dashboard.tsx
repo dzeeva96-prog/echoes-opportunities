@@ -61,7 +61,7 @@ function Stat({
   value,
   delta,
 }: {
-  Icon: any;
+  Icon: React.ComponentType<{ className?: string; size?: number }>;
   label: string;
   value: string;
   delta: string;
