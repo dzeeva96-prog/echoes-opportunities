@@ -93,13 +93,14 @@ function ArticlePage() {
         {/* Meta */}
         <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-muted-foreground">
           <div>
-            <span className="text-foreground font-medium">{site.author}</span>{" "}
-            · NIM {site.nim}
+            <span className="text-foreground font-medium">{site.author}</span> · NIM {site.nim}
           </div>
           <span className="inline-flex items-center gap-1.5">
             <Calendar size={12} />
             {new Date(article.publishedAt).toLocaleDateString("id-ID", {
-              day: "numeric", month: "long", year: "numeric",
+              day: "numeric",
+              month: "long",
+              year: "numeric",
             })}
           </span>
           <span className="inline-flex items-center gap-1.5">
@@ -110,12 +111,8 @@ function ArticlePage() {
 
         {/* Abstract */}
         <div className="mt-8 rounded-2xl border border-border bg-card p-6">
-          <div className="text-xs uppercase tracking-widest text-primary">
-            Abstrak
-          </div>
-          <p className="mt-2 text-[15px] leading-relaxed text-foreground/90">
-            {article.abstract}
-          </p>
+          <div className="text-xs uppercase tracking-widest text-primary">Abstrak</div>
+          <p className="mt-2 text-[15px] leading-relaxed text-foreground/90">{article.abstract}</p>
           <div className="mt-4 flex flex-wrap gap-2">
             {article.tags.map((t) => (
               <span
@@ -139,9 +136,7 @@ function ArticlePage() {
 
             {/* Conclusion */}
             <section className="mt-12 rounded-2xl gradient-hero p-8 text-white shadow-elegant">
-              <div className="text-xs uppercase tracking-widest text-white/70">
-                Kesimpulan
-              </div>
+              <div className="text-xs uppercase tracking-widest text-white/70">Kesimpulan</div>
               <p className="mt-3 leading-relaxed">{article.conclusion}</p>
             </section>
 

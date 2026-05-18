@@ -8,9 +8,7 @@ export function Footer() {
         <div className="grid gap-10 md:grid-cols-4">
           <div className="md:col-span-2">
             <div className="font-display text-2xl">{site.name}</div>
-            <p className="mt-3 max-w-md text-sm text-muted-foreground">
-              {site.description}
-            </p>
+            <p className="mt-3 max-w-md text-sm text-muted-foreground">{site.description}</p>
             <a
               href={site.amikomUrl}
               target="_blank"
@@ -26,10 +24,26 @@ export function Footer() {
               Navigasi
             </div>
             <ul className="mt-3 space-y-2 text-sm">
-              <li><Link to="/" className="hover:text-primary">Beranda</Link></li>
-              <li><Link to="/articles" className="hover:text-primary">Artikel</Link></li>
-              <li><Link to="/dashboard" className="hover:text-primary">Dashboard</Link></li>
-              <li><Link to="/about" className="hover:text-primary">Tentang</Link></li>
+              <li>
+                <Link to="/" className="hover:text-primary">
+                  Beranda
+                </Link>
+              </li>
+              <li>
+                <Link to="/articles" className="hover:text-primary">
+                  Artikel
+                </Link>
+              </li>
+              <li>
+                <Link to="/dashboard" className="hover:text-primary">
+                  Dashboard
+                </Link>
+              </li>
+              <li>
+                <Link to="/about" className="hover:text-primary">
+                  Tentang
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -47,8 +61,8 @@ export function Footer() {
         </div>
 
         <div className="mt-10 border-t border-border pt-6 text-center text-xs text-muted-foreground">
-          Website dibuat untuk Ujian Tengah Semester Lingkungan Bisnis Universitas
-          Amikom Yogyakarta. © {new Date().getFullYear()} {site.author}.
+          Website dibuat untuk Ujian Tengah Semester Lingkungan Bisnis Universitas Amikom
+          Yogyakarta. © {new Date().getFullYear()} {site.author}.
         </div>
       </div>
     </footer>

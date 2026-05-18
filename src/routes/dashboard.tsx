@@ -1,8 +1,19 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
-  AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer,
-  BarChart, Bar, PieChart, Pie, Cell, Legend,
+  AreaChart,
+  Area,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  ResponsiveContainer,
+  BarChart,
+  Bar,
+  PieChart,
+  Pie,
+  Cell,
+  Legend,
 } from "recharts";
 import { getVisitors } from "@/lib/visitors";
 import { Eye, MousePointerClick, Globe2, TrendingUp } from "lucide-react";
@@ -44,7 +55,17 @@ const trafficSources = [
 
 const PIE_COLORS = ["#0d9488", "#3b82f6", "#a855f7", "#f59e0b"];
 
-function Stat({ Icon, label, value, delta }: { Icon: any; label: string; value: string; delta: string }) {
+function Stat({
+  Icon,
+  label,
+  value,
+  delta,
+}: {
+  Icon: React.ComponentType<{ className?: string; size?: number }>;
+  label: string;
+  value: string;
+  delta: string;
+}) {
   return (
     <div className="rounded-2xl border border-border bg-card p-5">
       <div className="flex items-center justify-between">
@@ -63,20 +84,26 @@ function DashboardPage() {
 
   return (
     <section className="mx-auto max-w-6xl px-5 py-16">
-      <div className="text-xs uppercase tracking-widest text-muted-foreground">
-        Analytics
-      </div>
-      <h1 className="mt-2 font-display text-4xl md:text-5xl">
-        Dashboard Visitor
-      </h1>
+      <div className="text-xs uppercase tracking-widest text-muted-foreground">Analytics</div>
+      <h1 className="mt-2 font-display text-4xl md:text-5xl">Dashboard Visitor</h1>
       <p className="mt-3 max-w-2xl text-muted-foreground">
-        Ringkasan performa kunjungan dan pembaca website karya ilmiah ini. Data
-        gabungan dari penghitung lokal (live) dan dataset agregat 7 hari terakhir.
+        Ringkasan performa kunjungan dan pembaca website karya ilmiah ini. Data gabungan dari
+        penghitung lokal (live) dan dataset agregat 7 hari terakhir.
       </p>
 
       <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        <Stat Icon={Eye} label="Total kunjungan" value={visitors.toLocaleString("id-ID")} delta="▲ 12.4%" />
-        <Stat Icon={MousePointerClick} label="Pembaca artikel (7 hari)" value="2.020" delta="▲ 8.1%" />
+        <Stat
+          Icon={Eye}
+          label="Total kunjungan"
+          value={visitors.toLocaleString("id-ID")}
+          delta="▲ 12.4%"
+        />
+        <Stat
+          Icon={MousePointerClick}
+          label="Pembaca artikel (7 hari)"
+          value="2.020"
+          delta="▲ 8.1%"
+        />
         <Stat Icon={Globe2} label="Negara unik" value="14" delta="▲ 3" />
         <Stat Icon={TrendingUp} label="Avg. waktu baca" value="4m 12s" delta="▲ 18%" />
       </div>
@@ -115,8 +142,20 @@ function DashboardPage() {
                     fontSize: 12,
                   }}
                 />
-                <Area type="monotone" dataKey="visits" stroke="#0d9488" fill="url(#g1)" strokeWidth={2} />
-                <Area type="monotone" dataKey="reads" stroke="#3b82f6" fill="url(#g2)" strokeWidth={2} />
+                <Area
+                  type="monotone"
+                  dataKey="visits"
+                  stroke="#0d9488"
+                  fill="url(#g1)"
+                  strokeWidth={2}
+                />
+                <Area
+                  type="monotone"
+                  dataKey="reads"
+                  stroke="#3b82f6"
+                  fill="url(#g2)"
+                  strokeWidth={2}
+                />
               </AreaChart>
             </ResponsiveContainer>
           </div>

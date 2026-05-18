@@ -35,9 +35,7 @@ export function ShareButtons({ title, path }: { title: string; path: string }) {
 
   return (
     <div className="flex flex-wrap items-center gap-2">
-      <span className="mr-1 text-xs uppercase tracking-widest text-muted-foreground">
-        Bagikan
-      </span>
+      <span className="mr-1 text-xs uppercase tracking-widest text-muted-foreground">Bagikan</span>
       {links.map(({ Icon, href, label }) => (
         <a
           key={label}

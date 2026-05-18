@@ -34,9 +34,7 @@ export function Navbar() {
           <div className="hidden items-center gap-1 md:flex">
             {links.map((l) => {
               const active =
-                l.to === "/"
-                  ? location.pathname === "/"
-                  : location.pathname.startsWith(l.to);
+                l.to === "/" ? location.pathname === "/" : location.pathname.startsWith(l.to);
               return (
                 <Link
                   key={l.to}

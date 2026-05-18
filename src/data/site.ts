@@ -1,8 +1,7 @@
 export const site = {
   name: "Ekonomi Perang",
   tagline: "Karya Ilmiah · Peluang Bisnis di Tengah Dampak Perang",
-  title:
-    "Peluang Bisnis Akibat Dampak Perang terhadap Ekologi, Makro Ekonomi, dan Mikro Ekonomi",
+  title: "Peluang Bisnis Akibat Dampak Perang terhadap Ekologi, Makro Ekonomi, dan Mikro Ekonomi",
   author: "Nama Mahasiswa",
   nim: "2024xxxxxx",
   course: "Lingkungan Bisnis (SI012)",

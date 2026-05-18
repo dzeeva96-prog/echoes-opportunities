@@ -29,7 +29,9 @@ export const Route = createFileRoute("/sitemap.xml")({
             `    <changefreq>${e.changefreq}</changefreq>`,
             `    <priority>${e.priority}</priority>`,
             `  </url>`,
-          ].filter(Boolean).join("\n"),
+          ]
+            .filter(Boolean)
+            .join("\n"),
         );
 
         const xml = [

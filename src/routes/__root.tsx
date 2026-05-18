@@ -42,7 +42,10 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
         <h1 className="font-display text-2xl">Terjadi kesalahan</h1>
         <p className="mt-2 text-sm text-muted-foreground">{error.message}</p>
         <button
-          onClick={() => { router.invalidate(); reset(); }}
+          onClick={() => {
+            router.invalidate();
+            reset();
+          }}
           className="mt-6 rounded-full bg-foreground px-5 py-2.5 text-sm font-medium text-background"
         >
           Coba lagi
@@ -60,7 +63,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { title: `${site.name} — ${site.title}` },
       { name: "description", content: site.description },
       { name: "author", content: site.author },
-      { name: "keywords", content: "karya ilmiah, peluang bisnis, perang, ekologi, makro ekonomi, mikro ekonomi, Amikom, lingkungan bisnis" },
+      {
+        name: "keywords",
+        content:
+          "karya ilmiah, peluang bisnis, perang, ekologi, makro ekonomi, mikro ekonomi, Amikom, lingkungan bisnis",
+      },
       { property: "og:title", content: `${site.name} — ${site.title}` },
       { property: "og:description", content: site.description },
       { property: "og:type", content: "website" },
