@@ -165,7 +165,10 @@ export const articles: Article[] = [
       { text: "Nielsen (2024). Consumer Confidence Report." },
       { text: "Kementerian Koperasi dan UKM (2024). Statistik UMKM Indonesia." },
       { text: "Upwork (2024). Future Workforce Report." },
-      { text: "Cybersecurity Ventures (2024). Cybercrime Report.", url: "https://cybersecurityventures.com" },
+      {
+        text: "Cybersecurity Ventures (2024). Cybercrime Report.",
+        url: "https://cybersecurityventures.com",
+      },
     ],
   },
 ];

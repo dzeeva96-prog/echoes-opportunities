@@ -2,7 +2,13 @@ import { Link } from "@tanstack/react-router";
 import type { Article } from "@/data/articles";
 import { Clock, TrendingUp } from "lucide-react";
 
-export function ArticleCard({ article, featured = false }: { article: Article; featured?: boolean }) {
+export function ArticleCard({
+  article,
+  featured = false,
+}: {
+  article: Article;
+  featured?: boolean;
+}) {
   return (
     <Link
       to="/articles/$slug"
@@ -38,9 +44,7 @@ export function ArticleCard({ article, featured = false }: { article: Article; f
         <h3 className="font-display text-xl leading-tight transition-colors group-hover:text-primary">
           {article.title}
         </h3>
-        <p className="mt-2 line-clamp-3 text-sm text-muted-foreground">
-          {article.abstract}
-        </p>
+        <p className="mt-2 line-clamp-3 text-sm text-muted-foreground">{article.abstract}</p>
         <div className="mt-4 flex items-center justify-between text-xs text-muted-foreground">
           <span className="flex items-center gap-1.5">
             <Clock size={12} />

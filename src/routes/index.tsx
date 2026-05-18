@@ -44,9 +44,8 @@ function HomePage() {
           </h1>
 
           <p className="mt-6 max-w-2xl text-base text-white/85 md:text-lg">
-            Studi modern yang memetakan bagaimana krisis geopolitik global mengubah
-            ekologi, ekonomi makro, dan perilaku mikro — serta peluang bisnis baru
-            yang lahir darinya.
+            Studi modern yang memetakan bagaimana krisis geopolitik global mengubah ekologi, ekonomi
+            makro, dan perilaku mikro — serta peluang bisnis baru yang lahir darinya.
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -70,9 +69,7 @@ function HomePage() {
           {/* Author card */}
           <div className="mt-12 grid gap-4 md:grid-cols-[1fr_auto] md:items-end">
             <div className="glass max-w-md rounded-2xl border border-white/20 p-5 text-white">
-              <div className="text-[10px] uppercase tracking-[0.2em] text-white/70">
-                Penulis
-              </div>
+              <div className="text-[10px] uppercase tracking-[0.2em] text-white/70">Penulis</div>
               <div className="mt-1 font-display text-2xl">{site.author}</div>
               <div className="text-sm text-white/80">
                 NIM {site.nim} · {site.course}
@@ -110,9 +107,7 @@ function HomePage() {
             <div className="text-xs uppercase tracking-widest text-muted-foreground">
               Trending sekarang
             </div>
-            <h2 className="mt-2 font-display text-3xl md:text-4xl">
-              Artikel pilihan
-            </h2>
+            <h2 className="mt-2 font-display text-3xl md:text-4xl">Artikel pilihan</h2>
           </div>
           <Link to="/articles" className="text-sm text-primary hover:underline">
             Semua artikel →
@@ -144,8 +139,8 @@ function HomePage() {
               Tertarik mendalami dunia bisnis & teknologi?
             </h3>
             <p className="mt-3 max-w-xl text-white/80">
-              Kunjungi website resmi Amikom untuk informasi program studi,
-              penelitian, dan inovasi terbaru.
+              Kunjungi website resmi Amikom untuk informasi program studi, penelitian, dan inovasi
+              terbaru.
             </p>
             <a
               href={site.amikomUrl}

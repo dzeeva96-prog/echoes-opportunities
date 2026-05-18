@@ -11,7 +11,11 @@ export const Route = createFileRoute("/articles/")({
   head: () => ({
     meta: [
       { title: "Semua Artikel — Ekonomi Perang" },
-      { name: "description", content: "Daftar lengkap artikel ilmiah tentang dampak perang terhadap ekologi, makro, dan mikro ekonomi." },
+      {
+        name: "description",
+        content:
+          "Daftar lengkap artikel ilmiah tentang dampak perang terhadap ekologi, makro, dan mikro ekonomi.",
+      },
       { property: "og:title", content: "Semua Artikel" },
       { property: "og:url", content: "/articles" },
     ],
@@ -38,13 +42,11 @@ function ArticlesPage() {
 
   return (
     <section className="mx-auto max-w-6xl px-5 py-16">
-      <div className="text-xs uppercase tracking-widest text-muted-foreground">
-        Pustaka
-      </div>
+      <div className="text-xs uppercase tracking-widest text-muted-foreground">Pustaka</div>
       <h1 className="mt-2 font-display text-4xl md:text-5xl">Semua Artikel</h1>
       <p className="mt-3 max-w-2xl text-muted-foreground">
-        Telusuri kajian ilmiah tentang dampak perang dan peluang bisnis yang
-        lahir dari setiap krisis.
+        Telusuri kajian ilmiah tentang dampak perang dan peluang bisnis yang lahir dari setiap
+        krisis.
       </p>
 
       <div className="mt-8 grid gap-4 md:grid-cols-[1fr_auto] md:items-center">
